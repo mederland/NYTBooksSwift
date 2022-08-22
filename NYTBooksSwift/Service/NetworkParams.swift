@@ -31,7 +31,9 @@ enum NetworkParams {
             
             // MARK: Check for '/' in path
         case .bookPoster(let path):
-            return URL(string: NetworkConstants.bookPosterBase + path)
+            let baseURL = URL(string: NetworkConstants.bookPosterBase)
+            return  URL(string: path, relativeTo: baseURL)
+//            return URL(string: NetworkConstants.bookPosterBase + path)
         }
     }
     

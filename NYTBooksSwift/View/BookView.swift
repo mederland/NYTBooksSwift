@@ -23,7 +23,7 @@ struct BookView<T: BookListViewModelType>: View {
                     .frame(width: 150, height: 200, alignment: .center)
             }
                 .padding([.top, .bottom, .trailing], 8)
-            Text(bookListVM.books[index].title)
+            Text(bookListVM.books[index].bookDescription)
                 .padding([.top, .bottom, .trailing], 8)
         }
         .listRowInsets(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 0))
