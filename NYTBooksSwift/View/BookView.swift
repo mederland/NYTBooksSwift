@@ -14,7 +14,7 @@ struct BookView<T: BookListViewModelType>: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: NetworkParams.bookPoster(self.bookListVM.books[index].imagePath ?? "").url) { realImage in
+            AsyncImage(url: NetworkParams.bookPoster(self.bookListVM.books[index].bookImage ).url) { realImage in
                 realImage
                     .resizable()
                     .frame(width: 150, height: 200, alignment: .center)

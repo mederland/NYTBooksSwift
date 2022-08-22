@@ -18,7 +18,7 @@ struct ContentView<T: BookListViewModelType>: View {
                 
                 List {
                     ForEach(0..<self.bookListVM.books.count, id: \.self) { index in
-                        NavigationLink(destination: BookDetailView(movieVM: self.bookListVM, index: index)) {
+                        NavigationLink(destination: BookDetailView(bookVM: self.bookListVM, index: index)) {
                             BookView(bookListVM: self.bookListVM, index: index)
                                 .onAppear {
                                     self.bookListVM.requestMoviesIfNeeded(index: index)
