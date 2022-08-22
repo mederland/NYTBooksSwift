@@ -11,7 +11,7 @@ enum NetworkParams {
     
     private struct NetworkConstants {
         static let popularBooksBase = "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Y9mZT8QW3fANfh1SfZAiVcu1OZ7bvvyA"
-        static let bookPosterBase = "https://image.tmdb.org/t/p/w500"
+        static let bookPosterBase = "https://storage.googleapis.com/du-prd/books/images/9780062653314.jpg"
     }
     
     case popularBooks(Int)
